@@ -13,7 +13,6 @@
                 ;; --- Better Editor ---
                 hungry-delete
                 swiper
-                counsel
                 smartparens
 		popwin
 		expand-region
@@ -25,14 +24,12 @@
 		which-key
 		window-numbering
 		evil-nerd-commenter
-                ;; --- Major Mode ---
                 js2-mode
 		web-mode
-                ;; --- Minor Mode ---
                 nodejs-repl
                 exec-path-from-shell
-                ;; --- Themes ---
                 monokai-theme
+		projectile
                 ;; solarized-theme
                 ) "Default packages")
 
@@ -40,8 +37,8 @@
 
  (defun my/packages-installed-p ()
      (cl-loop for pkg in my/packages
-           when (not (package-installed-p pkg)) do (return nil)
-           finally (return t)))
+           when (not (package-installed-p pkg)) do (cl-return nil)
+           finally (cl-return t)))
 
  (unless (my/packages-installed-p)
      (message "%s" "Refreshing package database...")
@@ -146,5 +143,8 @@
 (window-numbering-mode 1)
 
 (evilnc-default-hotkeys 1)
+
+(projectile-mode 1)
+(setq projectile-project-search-path '("~/Workspace"))
 
 (provide 'init-packages)

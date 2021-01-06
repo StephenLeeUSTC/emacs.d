@@ -11,13 +11,9 @@
 
 
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
-
 (global-set-key (kbd "M-s o") 'occur-dwim)
-
 (global-set-key (kbd "M-s i") 'counsel-imenu)
-
 (global-set-key (kbd "C-=") 'er/expand-region)
-
 (global-set-key (kbd "M-s e") 'iedit-mode)
 
 (with-eval-after-load 'company
@@ -38,6 +34,8 @@
   "ff" 'counsel-find-file
   "fr" 'counsel-recentf
   "pf" 'counsel-git
+  "pp" 'projectile-switch-project
+  "<SPC>"  'counsel-git-grep
   "bb" 'switch-to-buffer
   "0"  'select-window-0
   "1"  'select-window-1
