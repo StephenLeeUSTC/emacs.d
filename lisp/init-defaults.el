@@ -1,3 +1,7 @@
+;; don't GC during startup to save time
+(setq gc-cons-percentage 0.6)
+(setq gc-cons-threshold most-positive-fixnum)
+
 (setq ring-bell-function 'ignore)
 
 (global-auto-revert-mode 1)
@@ -49,5 +53,9 @@
   (interactive)
   (goto-char (point-min))
   (while (search-forward "\r" nil t) (replace-match "")))
+
+(doom-modeline-mode 1)
+
+(setq initial-scratch-message "Never give up, never surrender.")
 
 (provide 'init-defaults)
