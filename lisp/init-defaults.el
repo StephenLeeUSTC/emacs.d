@@ -56,6 +56,6 @@
 
 (doom-modeline-mode 1)
 
-(setq initial-scratch-message "Never give up, never surrender.")
+(setq initial-scratch-message "Never give up! Never surrender!")
 
 (provide 'init-defaults)

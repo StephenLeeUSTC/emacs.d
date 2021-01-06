@@ -142,6 +142,6 @@
 (evilnc-default-hotkeys 1)
 
 (projectile-mode 1)
-(setq projectile-project-search-path '("~/Workspace"))
+(setq projectile-project-search-path '("~/Workspace/"))
 
 (provide 'init-packages)
