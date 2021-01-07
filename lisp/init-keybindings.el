@@ -9,7 +9,6 @@
 (global-set-key (kbd "C-h C-v") 'find-variable)
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
-
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
 (global-set-key (kbd "M-s o") 'occur-dwim)
 (global-set-key (kbd "M-s i") 'counsel-imenu)
@@ -25,8 +24,6 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c a") 'org-agenda)
 
-(global-set-key (kbd "C-w") 'backward-kill-word)
-
 ;; evil map
 (evil-leader/set-leader "<SPC>")
 
@@ -37,6 +34,7 @@
   "pp" 'projectile-switch-project
   "<SPC>"  'counsel-git-grep
   "bb" 'switch-to-buffer
+  "bd" 'kill-buffer
   "0"  'select-window-0
   "1"  'select-window-1
   "2"  'select-window-2

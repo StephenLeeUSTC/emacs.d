@@ -26,9 +26,11 @@
                       web-mode
                       exec-path-from-shell
                       monokai-theme
+		      doom-themes
                       projectile
                       doom-modeline
-                      ) "Default packages")
+		      google-c-style
+		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
 
@@ -86,7 +88,9 @@
 
 (global-company-mode 1)
 
-(load-theme 'monokai 1)
+;; (load-theme 'monokai 1)
+;; (load-theme 'solarized-dark 1)
+(load-theme 'doom-one 1)
 
 (require 'popwin)
 (popwin-mode 1)
@@ -143,5 +147,8 @@
 
 (projectile-mode 1)
 (setq projectile-project-search-path '("~/Workspace/"))
+
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
 (provide 'init-packages)
